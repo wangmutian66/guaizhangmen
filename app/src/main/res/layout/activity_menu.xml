@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            android:layout_weight="1" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/rgMenus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/boder_top"
+                android:paddingTop="5dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                >
+
+
+
+                <RadioButton
+                    style="@style/footerTabButton"
+                    android:id="@+id/guai"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/guai2hover"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/menu_focus_text_color"
+                    android:text="@string/guai" />
+
+                <RadioButton
+                    style="@style/footerTabButton"
+                    android:id="@+id/zhang"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/zhang2"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/menu_text_color"
+                    android:text="@string/zhang" />
+
+                <RadioButton
+                    style="@style/footerTabButton"
+                    android:id="@+id/men"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/men2"
+                    android:textColor="@color/menu_text_color"
+                    android:text="@string/men"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tab_menu_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="1dp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>
